@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bar {
+            margin: 200px auto;
+            padding: 1px;
+            height: 20px;
+            width: 300px;
+            border: 1px red solid;
+            border-radius: 10px;
+        }
+
+        .bar .bar-in {
+            width: 5%;
+            height: 100%;
+            border-radius: 10px;
+            background-color: red;
+            transition: all .3s ease-in;
+        }
+
+        .bar:hover .bar-in {
+            width: 100%;
+        }
+
+
+        .logo {
+            position: relative;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            height: 200px;
+            width: 200px;
+            margin: 200px auto;
+        }
+        .logo-all {
+            position: absolute;
+            width: 325px;
+            height: 150px;
+            margin: 25px;
+        }
+        .logo img {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border-radius: 30%;
+            transition: 0.1s ease-in-out;
+        }
+        .logo1 {
+            margin-right: 25px;
+        }
+        .logo:hover .logo1{
+            margin-left: -175px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bar">
+        <div class="bar-in"></div>
+    </div>
+    <div class="logo">
+        <div class="logo-all">
+            <img class="logo1" src="/Web/哆啦A梦.jpg">
+            <img class="logo2" src="/Web/Learn/学成在线案例/imgs/史迪仔.jpg">
+        </div>
+    </div>
+</body>
+
+</html>

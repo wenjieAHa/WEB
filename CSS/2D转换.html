@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rotate {
+            /* 溢出隐藏 */
+            overflow: hidden;
+            margin: 100px auto;
+            height: 200px;
+            width: 200px;
+            background-color: skyblue;
+        }
+        .rotate::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            /* 转换点 */
+            /* 默认值；50% 50% */
+            transform-origin: left bottom;
+            /* 旋转角度 */
+            /* 默认值：0deg */
+            transform: rotate(90deg);
+            /* 过渡 */
+            transition: 0.2s;
+        }
+        .rotate:hover::after {
+            transform: rotate(0deg);
+        }
+        .scale {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            transition: 0.2s;
+        }
+        .scale:hover {
+            /* 缩放倍数 */
+            /* 默认值(倍)：1(宽)，1(高) */
+            transform: scale(.5);
+            transform-origin: left top;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="rotate"></div>
+    <div class="scale"></div>
+</body>
+</html>

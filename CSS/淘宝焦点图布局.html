@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin-top: 300px;
+        }
+
+        .m {
+            margin: auto;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+        }
+
+        .tb-promo img {
+            width: 520px;
+            height: 280px;
+        }
+
+        .tb-promo div img {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+        }
+
+        .tb-promo .prev,
+        .next {
+            top: 50%;
+            margin-top: -15px;
+            height: 30px;
+            width: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 30px;
+            position: absolute;
+
+        }
+
+        .tb-promo .prev {
+            left: 0px;
+            text-align: left;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+        }
+
+        .tb-promo .next {
+            right: 0px;
+            text-align: right;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+
+        }
+
+        .tb-promo .promo-nav {
+            position: absolute;
+            width: 70px;
+            height: 13px;
+            bottom: 3px;
+            left: 210px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 35px;
+        }
+
+        .tb-promo .promo-nav ul li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            margin: 3px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .tb-promo .promo-nav ul li:hover {
+            background-color: #f50000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo m">
+        <img src="/Web/Learn/学成在线案例/imgs/皮卡丘.jpg" alt="duola">
+        <a href="#" class="prev">
+            < </a>
+                <a href="#" class="next">
+                    >
+                </a>
+                <div class="promo-nav">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+    </div>
+</body>
+
+</html>

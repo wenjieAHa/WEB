@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /* CSS 层叠样式表(Cascading Style Sheets) */
+        /* 标记语言 */
+        /* 规则： */
+        /* 选择器 声明 */
+        p {
+            color: red;
+        }
+
+        /* id选择器 只能调用一次 */
+        #onic {
+            background-color: blue;
+        }
+
+        /* *通配符选择器  选择所有标签*/
+        body {
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            /* 字体厚度 100~900*/
+            /* font: font-style font-weight font-size/line-height font-fanily; */
+            font: italic 700 16px/50px '微软雅黑';
+            /* 不能更改顺序 其中size和fanily必须保留 */
+
+            text-align: center;
+            /* 文本水平对齐方式 */
+
+            /* 文本修饰 */
+            /* 上划线 */
+            /* text-decoration: overline; */
+            /* 删除线 */
+            /* text-decoration: line-through; */
+            /* 下划线 */
+            /* text-decoration: underline; */
+            /* 默认 */
+            text-decoration: none;
+            /* 常用于取消a标签的默认下划线 */
+
+            /* 文本缩进 */
+            /* 常用与给p标签设置首行缩进 */
+            text-indent: 2em;
+            /* em：当前字体长度单位 */
+        }
+    </style>
+</head>
+
+<body>
+    <p>hhh</p>
+    <h6 id="onic">333</h6>
+    <p class="qingxie">styleffffffffff <br>33333333333</p>
+</body>
+
+</html>

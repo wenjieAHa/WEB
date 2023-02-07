@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* 盒子模型 */
+            box-sizing: border-box;
+        }
+        ul li {
+            text-align: center;
+        }
+        /* 结构伪类选择器 权重：10*/
+        /* 不定类型 在全部父元素中选择 */
+        ul li:first-child {
+            background-color: red;
+        }
+        ul li:last-child {
+            background-color: blue;
+        }
+        /* ul li:nth-child(表达式) */
+        /* n为零到无线 */
+        li:nth-child(2n) {
+            background-color: green;
+        }
+        li:nth-child(2n+1) {
+            background-color: skyblue;
+        }
+        /* 前几个 */
+        ul li:nth-child(-n+3) {
+            background-color: yellow;
+        }
+
+        /* 指定类型 选择元素匹配 */
+        ul a:nth-of-type(1) {
+            background-color: purple;
+        }
+
+        .a1 {
+            margin: 50px auto;
+            text-align: center;
+        }
+        /* 伪元素选择器 权重：1*/
+        /* 在父元素内创建一个行内元素 */
+        /* content必须样式 */
+        /* 里面的前面 in the front of */
+        .a1::before {
+            content: '前';
+        }
+        /* 里面的后面 in the behind of */
+        .a1::after {
+            content: '后';
+        }
+        .b1 {
+            text-align: center;
+
+        }
+        .b1 img {
+            /* 滤镜 */
+            /* 函数里的数越大越模糊 */
+            filter: blur(3px);
+            width: 30%;
+
+        }
+        .b1 img:hover {
+            filter: blur(0);
+            width: calc(20% - 30px);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <li>aaaaaaaaAAAAaaaaaaaaa</li>
+        <a href="#">3333</a>
+    </ul>
+    <div class="a1">
+        <img src="/Web/Learn/CSS/IMG_20230129_183926.jpg" alt="" width="300px">
+    </div>
+    <div class="b1">
+        <img src="/Web/哆啦A梦.jpg" alt="">
+    </div>
+</body>
+
+</html>
